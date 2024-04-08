@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispensables</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div id="nav-id">
+        <div class="nav-link text" id="title-id">
+            <a href="index.html">Code Reengineering</a>
+        </div>
+        <div class="nav-link text" id="nav-button-id">
+            <a href="changepreventer.html">Change Preventer</a>
+            <a class="active" href="dispensables.html">Dispensables</a>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content-cp">
+        <div class="text" id="background">
+            <h1>Dispensables</h1>
+        </div>
+    </div>
+    <div class="text cp-box">
+        <h1>Comments</h1>
+        <p>Code smell in terjadi pada saat sebuah method diisi dengan penjelasan terkait dengan method tersebut yang seharusnya tidak diperlukan apabila method tersebut bersifat self-explanatory. 
+            <span>Solusi: </span>Dapat dipecah dengan extract variable, dipisah dengan extract method serta rename method agar bersifat self-explanatory.</p>
+        <p style="color: red; font-size: 1.4vw;">Before</p>
+        <img src="assets\commentbefore.png" alt="">
+        <p style="color: lime; font-size: 1.4vw;">After</p>
+        <img src="assets\commentsafter.png" alt="">
+        <p>Dalam contoh di atas, setiap metode memiliki komentar yang menjelaskan apa yang dilakukan oleh metode tersebut. Namun, komentar-komentar ini sebenarnya tidak menambahkan banyak nilai karena fungsionalitas metode-metode tersebut sudah jelas dari namanya dan implementasinya</p>
+    </div>
+    <div class="text cp-box">
+        <h1>Duplicate Code</h1>
+        <p>Code smell ini terjadi apabila terdapat dua atau lebih method atau class yang sangat identik. 
+            <span>Solusi: </span>Gunakan extract method untuk tempat ditemukannya duplicate code.
+        </p>
+        <p style="color: red; font-size: 1.4vw;">Before</p>
+        <img src="assets\dcbefore.png" alt="">
+        <p style="color: lime; font-size: 1.4vw;">After</p>
+        <img src="assets\dcafter.png" alt="">
+        <p>Pada contoh di atas, kita telah memperbaiki kode dengan menghilangkan variabel yang tidak perlu (luas) dan langsung return hasil perhitungan.</p>
+    </div>
+    <div class="text cp-box">
+        <h1>Lazy Class</h1>
+        <p>Code smell ini terjadi apabila terdapat sebuah class dengan beberapa method yang hanya melakukan sedikit proses atau bahkan tidak melakukan proses apapun
+            <span>Solusi: </span>Gunakan inline class untuk memindahkan semua fitur dari lazy class ke class lain.
+        </p>
+        <p style="color: red; font-size: 1.4vw;">Before</p>
+        <img src="assets\lcbefore.png" alt="">
+        <p style="color: lime; font-size: 1.4vw;">After</p>
+        <img src="assets\lcafter.png" alt="">
+        <p>Pada kelas address diatas, tidak terdapat banyak fungsionalitas, hanya sekedar untuk menyimpan alamat saja 
+            Untuk mengatasi masalah ini, dapat melakukan refaktorisasi dengan metode inline class ke class customer.</p>
+    </div>
+    <div class="text cp-box">
+        <h1>Data Class</h1>
+        <p>Code smell ini terjadi apabila terdapat sebuah class yang hanya memiliki sedikit fungsionalitas dan tidak dapat dikatakan sebagai sebuah class. 
+            <span>Solusi: </span>Gunakan Encapsulation Field untuk variable public. Untuk data array, menggunakan Encapsulate Collection.
+        </p>
+        <p style="color: red; font-size: 1.4vw;">Before</p>
+        <img src="assets\dataclassbefore.png" alt="">
+        <p style="color: lime; font-size: 1.4vw;">After</p>
+        <img src="assets\dataclassafter.png" alt="">
+        <p>Pada kelas diatas, dapat dilihat bahwa kelas tersebut hanya menyimpan atribut beserta dengan setter getter nya. Hal ini diklasifikasikan ke dalam data class dan untuk merefaktorisasi kelas tersebut dapat menambahkan 1 atau 2 method baru.</p>
+    </div>
+    <div class="text cp-box">
+        <h1>Dead Code</h1>
+        <p>Code smell ini terjadi apabila terdapat sebuah class atau method yang sama sekali tidak digunakan dalam program tersebut. 
+            <span>Solusi: </span>dapat menggunakan inline class atau hierarchy collapse serta dapat juga menghapus code yang tidak digunakan.
+        </p>
+        <p style="color: red; font-size: 1.4vw;">Before</p>
+        <img src="assets\deadcodebefore.png" alt="">
+        <p style="color: lime; font-size: 1.4vw;">After</p>
+        <img src="assets\deadcodeafter.png" alt="">
+        <p>Pada class calculator diatas, terdapat sejumlah function untuk melakukan operasi matematika. Namun untuk funct   ion perkalian dan pembagian tidak pernah digunakan sama sekali. Jadi kita dapat menghapus kedua function tersebut dengan remove method.
+        </p>
+    </div>
+    <div class="text cp-box">
+        <h1>Speculative Generality</h1>
+        <p>Code smell ini terjadi apabila terdapat penambahan method ke dalam sebuah class yang mungkin akan digunakan di masa depan. Hal ini menyebabkan kode menjadi semakin kompleks dan sulit untuk dikelola.
+            <span>Solusi: </span>Menggunakan collapse hierarchy, inline class, inline method, remove parameter, dan hapus field yang tidak terpakai.
+        </p>
+        <p style="color: red; font-size: 1.4vw;">Before</p>
+        <img src="assets\spegebefore.png" alt="">
+        <p style="color: lime; font-size: 1.4vw;">After</p>
+        <img src="assets\spegeafter.png" alt="">
+        <p>Pada contoh setelah perbaikan, kita hanya membuat kelas-kelas yang benar-benar dibutuhkan tanpa adanya interface Shape. Ini membuat kode menjadi lebih sederhana, lebih mudah dipahami, dan menghindari smell code "Speculative Generality".
+        </p>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="text" id="footer">
+        <p>©Copyright 2024 <span>TimCR</span>. All Rights Reserved syarat dan ketentuan user</p>
+    </div>
+</body>
+</html>

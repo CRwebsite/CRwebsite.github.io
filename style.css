@@ -1,0 +1,238 @@
+body{
+    position: relative;
+    overflow-x: hidden;
+    margin: 0vw;
+}
+
+.text{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1vw;
+    color: #5C5C5C;
+}
+
+/* Header-Homepage */
+#nav-id{
+    position: relative;
+    height: 5vw;
+}
+
+.nav-link a{
+    color: #5C5C5C;
+}
+
+#title-id{
+    position: absolute;
+    left: 4vw;
+    top: 1vw;
+}
+
+#title-id a{
+    font-size: 2vw;
+}
+
+#nav-button-id{
+    position: absolute;
+    left: 68vw;
+    top: 1.5vw;
+}
+
+#nav-button-id a{
+    margin-left: 2vw;
+
+    font-size: 1.25vw;
+}
+
+#nav-button-id{
+    color: #5C5C5C;
+}
+
+.nav-link a:link{
+    text-decoration: none;
+}
+
+.nav-link a:visited{
+    text-decoration: none;
+}
+
+.nav-link a:active{
+    text-decoration: none;
+}
+
+.nav-link a:hover{
+    color: black;
+}
+
+.nav-link .active{
+    color: #71C9CE;
+}
+
+/* Content */
+#content-id{
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+}
+
+#content-paragraph h1{
+    position: absolute;
+    top: 5vw;
+    left: 7vw;
+
+    font-size: 1.5vw;
+    color: #5C5C5C;
+}
+
+#content-paragraph p{
+    position: absolute;
+    width: 35vw;
+    top: 7.5vw;
+    left: 7vw;
+
+    font-size: 1.1vw;
+    color: #5C5C5C;
+}
+
+#content-paragraph span{
+    color: #71C9CE;
+}
+
+#content-button{
+    position: absolute;
+    top: 20vw;
+    left: 10vw;
+}
+
+#content-button a{
+    margin-left: 5vw;
+
+    padding: 1vw;
+    border-radius: 1.1vw;
+    color: white;
+    background-color: #71C9CE;
+}
+
+#content-button a:link{
+    text-decoration: none;
+}
+
+#content-button a:visited{
+    text-decoration: none;
+}
+
+#content-button a:active{
+    text-decoration: none;
+}
+
+#content-button a:hover{
+    background-color: #65ACB0;
+}
+
+
+#content-img img{
+    width: 30vw;
+}
+
+#content-img{
+    position: absolute;
+    left: 65vw;
+    top: 5vw;
+}
+
+#about-us{
+    position: absolute;
+    width: 75vw;
+    top: 32vw;
+    left: 7vw;
+}
+
+#about-us h1{
+    font-size: 1.5vw;
+    color: #5C5C5C;
+}
+
+#about-us p{
+    font-size: 1.1vw;
+    color: #5C5C5C;
+}
+
+#footer{
+    position: relative;
+}
+
+#background{
+    position: absolute;
+    width: 100vw;
+    height: 30vw;
+    background-color: #E3FDFD;
+}
+
+/* Content-ChangePreventer */
+#content-cp{
+    position: relative;
+    height: 30vw;
+}
+
+#background h1{
+    position: absolute;
+    left: 40vw;
+    top: 10vw;
+
+    color: #71C9CE;
+}
+
+.cp-box{
+    position: relative;
+    border-style: solid;
+    left: 6.5vw;
+    width: 85vw;
+    height: auto;
+
+    margin-top: 1vw;
+}
+
+.cp-box h1{
+    position: relative;
+    left: 5vw;
+    font-weight: 500;
+    font-size: 1.6vw;
+}
+
+.cp-box h2{
+    position: relative;
+    left: 5vw;
+    top: 12vw;
+}
+
+.cp-box p{
+    position: relative;
+    width: 76vw;
+    left: 5vw;
+}
+
+.cp-box span{
+    color: #71C9CE;
+}
+
+.cp-box img{
+    position: relative;
+    width: 22vw;
+    left: 5vw;
+}
+
+/* Footer */
+
+#footer{
+    position: relative;
+    height: 5vw;
+}
+
+#footer p{
+    position: absolute;
+    left: 31vw;
+}
+
+#footer span{
+    color: #71C9CE;
+}
